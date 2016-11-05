@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" href="../favicon.ico"/>
+		<meta charset="utf-8" />
+<title><Hoverboard Back to the future 2</title>
+</head>
+
+<body>
+	<header>
+		<h1>Hoverboard (Back to the future 2)</h1>
+		<hr width = "100%" />
+	</header>
+	
+	<section>
+	
+<p><em>Okay, today i'm gonna show you how to make a good looking Hoverboard for less than 30$. We will start with a look on the material to use : </em></p>
+
+<h3><u>Ingridents:</u></h3>
+<table border = "1">
+
+<caption><b> Supplies </b></caption>
+<thead>
+	<tr>
+		<td>Things needed</td>
+		<td>No. of things needed</td>
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td>		
+		
+	<ul style="list-style-type:disc">
+	<li><i><strong>Foam</strong></i></li>
+	<li><i><strong>Hot glue</strong></i></li>
+	<li><i><strong>White glue</strong></i></li>
+	<li><i><strong>Glossy paper</strong></i></li>
+	<li><i><strong>Spray and normal paint</strong></i></li> 
+	<li><i><strong>Xacto</strong></i></li>
+	<li><i><strong>Scissor</strong></i></li>
+	<li><i><strong>Velcro</strong></i></li>
+	<li><i><strong>Screw</strong></i></li>
+	</ul>
+
+</td>
+
+<td>
+1<br/>
+2<br/>
+1<br/>
+3<br/>
+1<br/>
+1<br/>
+</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+
+<hr>
+
+<h3><u>Directions:</u></h3>
+<table border = "1">
+<tr>
+<td>
+<ol type="1">
+<li><b>Model and cutting</b> - <i>The first thing to do is searching a model of an Hoverboard. Traced the model on one sheet of foam and cut it with an Exacto.</i></li>
+<br><br>
+<li><b>Glue together + sanding</b> - <i>You can Repeat the previous step another time and glue everything together. When sanding, you can put a curve effect on the sides, like the real Hoverboard.</i></li>
+<br><br>
+<li><b>Bottom</b> - <i>For the parts beneath magnets, use foam you had left (hence the weird rectangle holes). For thicker parts use the foam sheets.</i></li>
+<br><br>
+<li><b>Paint</b> - <i>You can choose any color you want. To harden the foam you can apply 3-4 layer of white glue. Then, it will be less complicated and much better to apply the spray and the other colors</i></li>
+<br><br>
+<li><b>Printing and design</b> - <i>If you print on multiple pages, the better thing to do is to cut the model according to the pink diagonals on the design. Or otherwise you will see the horizontal cut...</i></li>
+</td>
+<td>
+<img src="http://cdn.instructables.com/FXO/YU5H/HNM4HN7G/FXOYU5HHNM4HN7G.MEDIUM.jpg" alt="base"/>
+</td>
+</tr>
+
+<tr>
+</tr>
+</table>
+
+</section>
+<nav>
+</nav>
+<footer>
+</footer>
+
+</body>
+
+</html>
