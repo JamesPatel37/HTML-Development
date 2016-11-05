@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+<title> John's Pizza House</title>
+
+<script type="text/javascript">
+function myFunction() {
+
+ var name = document.forms["myForm"]["name"].value;
+
+	if (name == null || name == "") {
+		alert("Please enter your name");
+		return false;
+	}
+
+ var address = document.forms["myForm"]["address"].value;
+ 
+	if (address == null || address == "") {
+		window.alert("Please enter your address");
+	}
+
+ var email = document.forms["myForm"]["email"].value;
+ var atpos = email.indexOf("@");
+ var dotpos = email.lastIndexOf(".");
+  
+    if ( atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length ) {
+        alert("Please enter a valid e-mail address");
+        return false;
+    }
+	
+ var radio1 = document.getElementById("RADIO1").checked;
+ var radio2 = document.getElementById("RADIO2").checked;
+ var radio3 = document.getElementById("RADIO3").checked;
+ 
+ var length = document.myForm.size.length; 
+ 
+ 	if ((!radio1 == true) && (!radio2 == true) && (!radio3 == true)) {
+		alert("Please select the size of pizza");
+	}
+ 
+ var size = document.myForm.size.value;
+ 
+	for (var i = 0; i < length; i++) {
+		if (document.myForm.size[i].checked) {
+			break;
+		}
+	}
+		if(size == "") {
+			return false;
+		}
+					
+ var last = document.forms[0].topping;
+ var text = "";
+ var temp = 0;
+	for (var i = 0; i < last.length; i++) {
+		if (last[i].checked) {
+			text = text + last[i].value + ", ";
+           	temp++;
+       	}
+ 	}
+ 		if (text == "") {
+ 			return false;
+ 		}
+		
+ var final = 1;
+ 
+ var type = document.getElementById("SELECT").value;
+ 
+ 	if (type == "regular" && temp > 3) {
+		final = 0;
+		alert("For regular pizza the maximum allowed toppings are 3");
+    }
+    
+	if (type == "deepdish" && temp > 4) {
+    	final = 0;
+    	alert("For deep dish pizza the maximum allowed toppings are 4");
+    }
+    
+	if (type == "deepdish" && size == "small") {
+		var cost = ( temp * 3 ) + 4 + 5;
+    }
+    
+	else if (type == "deepdish" && size == "medium") {
+    	var cost = ( temp * 3 ) + 4 + 8;
+    }
+    
+	else if (type == "deepdish" && size == "large") {
+    	var cost = ( temp * 3 ) + 4 + 10;
+    }
+    
+	else if (type == "regular" && size == "small") {
+    	var cost = ( temp * 3 ) + 5;
+    }
+    
+	else if (type == "regular" && size == "medium") {
+    	var cost = ( temp * 3 ) + 8;
+    }
+    
+	else if (type == "regular" && size == "large") {
+    	var cost = ( temp * 3 ) + 10;
+    }
+    
+	if (final == 1) {
+		alert("Thank You, " + name + "!" +
+		"\nThe order is placed for a " + size + " sized " + type + " pizza with " + text + " toppings." +
+		"\nIt will be delivered to " + address + "." +
+		"\nThe total cost of the order is $" + cost + "." +
+		"\nA confirmation will be sent to " + email + ".");
+	}
+}
+
+function Select() {
+ var type = document.getElementById("SELECT").value;
+ var size = document.myForm.size.value;
+ var length = document.myForm.size.length;
+	for (var i = 0; i < length; i++) {
+		if (document.myForm.size[i].checked) {
+			break;
+		}
+	}
+	if (type == "deepdish" && size == "small") {
+		alert("Please select medium or large size pizza for Deep Dish");
+	}
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1><center><u>Welcome to the John's Pizza House</u></center></h1>
+<h3><u>Order Online:</u></h3>
+
+<form name="myForm">
+Name: <br> <input type="text" name="name" id="NAME"/> <br>
+Address: <br> <input type="text" name="address" id="ADD"/> <br>
+Email: <br> <input type="text" name="email" id="EMAIL"/> <br>
+<br>
+
+<b>Select the size of pizza:</b> <br><br>
+    <label><input type="radio" name="size" value="small" id="RADIO1"/> Small</label> <br>
+    <label><input type="radio" name="size" value="medium" id="RADIO2"/> Medium</label> <br>
+    <label><input type="radio" name="size" value="large" id="RADIO3"/> Large</label> <br>
+<br>
+
+<b>Select the type of pizza:</b> <br><br>
+<select id="SELECT" onchange="Select()">
+    <!--option value="" disabled="disabled" selected="selected">Please select a name</option-->
+    <option value="regular" >Regular</option>
+    <option value="deepdish" >Deep Dish</option>
+</select>
+<br><br>
+
+<b>Select Pizza Toppings:</b> <br><br>
+<input type="checkbox" id="c1" name="topping" value="Red Onions">Red Onions<br>
+<input type="checkbox" id="c2" name="topping" value="Roma Tomatoes">Roma Tomatoes<br>
+<input type="checkbox" id="c3" name="topping" value="Fresh Mushrooms">Fresh Mushrooms<br>
+<input type="checkbox" id="c4" name="topping" value="Green Olives">Green Olives<br>
+<input type="checkbox" id="c5" name="topping" value="Cheese">Cheese 
+<br><br>
+
+<button type="button" onclick="myFunction()"><b>Order</b></button>
+
+</form>
+</body>
+</html>
