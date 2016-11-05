@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<title> Chess Board </title>
+	
+<style>
+body
+{
+	background: #abdc28;
+	padding: 20px;
+}
+
+.dark, #table1 tr:nth-child(even) td:nth-child(even) , tr:nth-child(odd) td:nth-child(odd)
+{
+    margin: 0 auto;
+	border-collapse: collapse;
+	background: black;
+	color: white;
+	
+}
+
+.bright, #table1 tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd)
+{
+	background: white;
+	color: black;
+}
+
+#table1 td
+{
+	width: 50px; height: 50px;	
+}
+</style>
+</head>
+
+
+<body>
+
+<b>Please enter your name:</b> <br><br>
+First Name: <input type="text" name="fname" id="fn"> <br><br>
+Last Name: <input type="text" name="lname" id="ln"> <br><br>
+<br>
+
+<b>Please enter the dimensions of your chess board:</b> <br><br>
+Enter the number of rows: <input type="text" name="rows" id="rows"/> <br><br>
+Enter the number of cols: &nbsp <input type="text" name="cols" id="cols"/> <br><br>
+
+<button type="button" onclick="myFunction()">Create Table</button> <br><br>
+
+<center><h1 id="heading" ></h1></center>
+<center><div id="wrapper"></div></center>
+
+<script type="text/javascript">
+
+function myFunction() {
+    var x = document.getElementById("fn").value;
+	var y = document.getElementById("ln").value;
+	var z;
+		if (window.confirm("Is it ok with you, if we call you by your first name?") == true) {
+			z = x;
+		} else {
+			z = y;
+		}
+
+	
+    var num_rows = parseInt(document.getElementById('rows').value);
+	
+		if ( num_rows < 2 ) {
+			window.alert("it is too low, number of rows must be between 2 and 15");
+			return;
+		}
+		else if ( num_rows > 15 ) {
+    		window.alert("it is too high, number of rows must be between 2 and 15");
+			return;
+		}
+
+	var num_cols = parseInt(document.getElementById('cols').value);
+
+		if ( num_cols < num_rows) {
+			window.alert("it is too low, number of columns must be atleast equal to " + num_rows);
+			return;
+		}
+		
+		else if ( num_cols > 20 ) {
+			window.alert("it is too high, enter a correct value between " + num_rows + " and 20 ");
+			return;
+		}
+
+	document.getElementById("heading").innerHTML = "Hello " + z + "! Here is your table:";
+		
+	
+	var theader = "<table border='2'  id='table1'>";
+    var tbody = "";
+
+	for(var i = 1; i <= num_rows; i++)
+	{
+		tbody += "<tr>";
+        for(var j = 1; j <= num_cols; j++)
+        {
+            tbody += "<td>";
+            tbody += "&nbsp r" + i + " c" + j;
+            tbody += "</td>"
+        }
+			tbody += "</tr><br/>";
+	}
+    
+	var tfooter = "</table>";
+	document.getElementById('wrapper').innerHTML = theader + tbody + tfooter;
+}
+
+</script>
+
+</body>
+</html>
