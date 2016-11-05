@@ -1,0 +1,45 @@
+body {
+    background-image: url("TajMahal.jpg");
+	background-repeat: repeat-x;
+	background-position: right top;
+	text-align: center;
+	
+	background: url("TajMahal.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+    padding-top: 12px;
+    padding-right: 50px;
+    padding-bottom: 12px;
+    padding-left: 50px;
+
+
+}
+
+h1 {
+    color: blue;
+    margin-left: 20px;
+	font-size: 300%;
+	text-shadow: 5px 5px 5px grey;
+
+}
+
+h2 {
+    margin-left: 20px;
+	font-style: italic;
+	color:navy;
+	text-shadow: 5px 5px 5px grey;
+}
+
+h1.caitalize {
+    text-transform: capitalize;
+}
+
+p.kns {
+color:grey;
+background-color: #DDDDDD;
+word-wrap: break-word;
+font-style: italic;
+}
